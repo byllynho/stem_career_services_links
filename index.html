@@ -2,31 +2,24 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Follow Us!!</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!-- Bootstrap core CSS  <link href="../../css/editor.css" rel="stylesheet"> -->
-    
-
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
+	 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <style>
     body {
       text-align: center;
-      background: url('blue_background.png'); 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+      background: url('blue_background2.jpg'); 
+      -webkit-background-size: repeat;
+      -moz-background-size: repeat;
+      -o-background-size: repeat;
+      background-size: repeat;
     }
 
     .wrapper {
@@ -38,7 +31,7 @@
     }
 
     i {
-      padding: 0px 60px;
+      padding: 0px 10px;
       margin-top: 60px;
     }
 
@@ -64,25 +57,53 @@
       transition: all ease-in-out 150ms;
     }
 
+    .social_media {
+      font-size: 300px;
+    }
+
+    #memphis_log {
+      position:absolute;
+      bottom:30px;
+      right:30px;
+    }
+
+    @media screen and (max-width: 900px) {
+      .social_media {
+        font-size: 250px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .social_media {
+        font-size: 200px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .social_media {
+        font-size: 150px;
+      }
+    }
+
     </style>
 
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="general_div">
       <div class="col-md-12">      
             
         <div class="col-md-12">     
           <h1 style="color: #0d3182; font-family: Aclonica; font-size: 60px; font-style: oblique;">STEM Career Services</h1>      
           <p style="color: grey; font-family: Apple Chancery; font-size: 35px; font-style: italic;">Follow us on our SOCIAL MEDIA.</p>
           <div class="wrapper">
-            <a class="profile_link" target="_blank" href="https://www.facebook.com/UofM-STEM-Careers-295902577579525"><i class="fa fa-5x fa-facebook-square" style="font-size: 300px;"></i></a>
-            <a class="profile_link" target="_blank" href="https://twitter.com/uofmstemcareers"><i class="fa fa-5x fa-twitter-square" style="font-size: 300px;"></i></a>
-            <a class="profile_link" target="_blank" href="https://www.instagram.com/uofmstemcareers/"><i class="fa fa-5x fa-instagram" style="font-size: 300px;"></i></a>
+            <a class="profile_link" target="_blank" href="https://www.facebook.com/UofM-STEM-Careers-295902577579525"><i class="fa fa-5x fa-facebook-square social_media"></i></a>
+            <a class="profile_link" target="_blank" href="https://twitter.com/uofmstemcareers"><i class="fa fa-5x fa-twitter-square social_media"></i></a>
+            <a class="profile_link" target="_blank" href="https://www.instagram.com/uofmstemcareers/"><i class="fa fa-5x fa-instagram social_media"></i></a>
           </div>        
         </div>    
       </div>
-      
+     <img id="memphis_log" src="umemphis.png">
     </div>
     
   </body>
