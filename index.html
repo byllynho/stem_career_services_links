@@ -11,7 +11,7 @@
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+   
     <style>
     body {
       text-align: center;
@@ -58,7 +58,7 @@
     }
 
     .social_media {
-      font-size: 300px;
+      font-size: 280px;
     }
 
     #memphis_log {
@@ -69,36 +69,79 @@
 
     @media screen and (max-width: 900px) {
       .social_media {
-        font-size: 250px;
+        font-size: 230px;
       }
     }
 
     @media screen and (max-width: 700px) {
       .social_media {
-        font-size: 200px;
+        font-size: 180px;
+      }
+      #memphis_log {
+        width: 150px;
       }
     }
 
     @media screen and (max-width: 600px) {
       .social_media {
-        font-size: 120px;
+        font-size: 110px;
       }
       #memphis_log {
-        width: 150px;
+        width: 130px;
       }
     }
 
     @media screen and (max-width: 500px) {
       .social_media {
-        font-size: 100px;
+        font-size: 90px;
       }
       #memphis_log {
-        width: 150px;
+        width: 130px;
       }
     }
 
     </style>
 
+    <script>
+    var isMobile = {
+      Android: function() {
+          return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+          return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+          return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+          return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+      }
+    };
+
+    $(document).ready(function(){
+      if( isMobile.iOS() ) {
+        $('#facebook_link').attr('href','fb://profile/295902577579525');
+        $('#twitter_link').attr('href','https://twitter.com/uofmstemcareers');
+        $('#instagram_link').attr('href','https://www.instagram.com/uofmstemcareers/');
+      } else if( isMobile.Android() ) {
+        $('#facebook_link').attr('href','fb://facewebmodal/f?href=295902577579525');
+        $('#twitter_link').attr('href','twitter://user?user_id=uofmstemcareers');
+        $('#instagram_link').attr('href','https://www.instagram.com/uofmstemcareers/');
+      } else {
+        $('#facebook_link').attr('href','https://www.facebook.com/UofM-STEM-Careers-295902577579525/');
+        $('#twitter_link').attr('href','https://twitter.com/uofmstemcareers');
+        $('#instagram_link').attr('href','https://www.instagram.com/uofmstemcareers/');
+      }
+      
+    });
+    
+   </script>
   </head>
 
   <body>
@@ -109,9 +152,9 @@
           <h1 style="color: #0d3182; font-family: Aclonica; font-size: 40px; font-style: oblique;">STEM Career Services</h1>      
           <p style="color: grey; font-family: Apple Chancery; font-size: 15px; font-style: italic;">Follow us on our SOCIAL MEDIA.</p>
           <div class="wrapper">
-            <a class="profile_link" target="_blank" href="fb://profile/295902577579525"><i class="fa fa-5x fa-facebook-square social_media"></i></a>
-            <a class="profile_link" target="_blank" href="https://twitter.com/uofmstemcareers"><i class="fa fa-5x fa-twitter-square social_media"></i></a>
-            <a class="profile_link" target="_blank" href="https://www.instagram.com/uofmstemcareers/"><i class="fa fa-5x fa-instagram social_media"></i></a>
+            <a class="profile_link" id="facebook_link" target="_blank" href="fb://profile/295902577579525"><i class="fa fa-5x fa-facebook-square social_media"></i></a>
+            <a class="profile_link" id="twitter_link" target="_blank" href="https://twitter.com/uofmstemcareers"><i class="fa fa-5x fa-twitter-square social_media"></i></a>
+            <a class="profile_link" id="instagram_link" target="_blank" href="https://www.instagram.com/uofmstemcareers/"><i class="fa fa-5x fa-instagram social_media"></i></a>
           </div>        
         </div>    
       </div>
